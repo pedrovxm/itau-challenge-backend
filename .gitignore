@@ -1,0 +1,10 @@
+**/node_modules/
+
+
+# Env files
+.env
+.env.*
+
+
+# MongoDB data (se tiver volumes locais)
+data/

@@ -1,0 +1,8 @@
+###POST First Transaction
+POST http://localhost:3001/transactions
+Content-Type: application/json
+
+{
+    "valor": 123.45,
+    "dataHora" : "2020-08-07T12:34:56.789-03:00"
+}
