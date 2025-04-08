@@ -17,6 +17,19 @@ class TransactionController{
             res.status(400)
         }
     }
+
+    async findManyTransactions(req,res){
+        try{
+            
+            const newTransactionService = new TransactionService()
+            
+            const transactions = await newTransactionService.findManyTransactions()
+
+            res.status(200).json(transactions)
+        }catch(err){
+            res.status(400).json({error: err})
+        }
+    }
 }
 
 

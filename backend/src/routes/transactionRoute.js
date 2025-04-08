@@ -9,6 +9,7 @@ const transactionController = new TransactionController()
 
 
 transactionRouter.post("/transactions",transactionController.createTransaction)
+transactionRouter.get("/transactions",transactionController.findManyTransactions)
 
 
 export{transactionRouter}

@@ -22,6 +22,17 @@ class TransactionService{
         console.log(`Error validating transaction ${err}`)
     }
 }
+
+async findManyTransactions(){
+    try{
+        const transactions = await transactionModel.find({})
+        return transactions
+
+    }catch(err){
+        console.log(`Error finding transactions: ${err}`)
+        throw new Error('Failed to fetch transactions');
+    }
+}
 }
 
 
